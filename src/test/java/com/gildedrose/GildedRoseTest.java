@@ -84,4 +84,18 @@ public class GildedRoseTest {
 
         assertThat(app.items[0].quality).isEqualTo(itemQuality);
     }
+
+    @Test
+    public void should_not_change_anything_on_the_sulfuras_when_a_day_passes() {
+        String itemName = "Sulfuras, Hand of Ragnaros";
+        int itemSellIn = 0;
+        int itemQuality = 80;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(itemQuality);
+        assertThat(app.items[0].sellIn).isEqualTo(itemSellIn);
+    }
 }
