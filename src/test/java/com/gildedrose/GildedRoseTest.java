@@ -111,4 +111,30 @@ public class GildedRoseTest {
 
         assertThat(app.items[0].quality).isEqualTo(itemQuality + 1);
     }
+
+    @Test
+    public void should_increase_quality_twice_faster_for_Backstage_passes_when_sellIn_date_smaller_or_equal_to_10_but_bigger_than_5() {
+        String itemName = "Backstage passes to a TAFKAL80ETC concert";
+        int itemSellIn = 10;
+        int itemQuality = 20;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(itemQuality + 2);
+    }
+
+    @Test
+    public void should_increase_quality_triple_times_faster_for_Backstage_passes_when_sellIn_date_smaller_or_equal_to_5_but_bigger_than_0() {
+        String itemName = "Backstage passes to a TAFKAL80ETC concert";
+        int itemSellIn = 5;
+        int itemQuality = 20;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(itemQuality + 3);
+    }
 }
