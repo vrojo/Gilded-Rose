@@ -41,4 +41,17 @@ public class GildedRoseTest {
 
         assertThat(app.items[0].sellIn).isEqualTo(itemSellIn - 1);
     }
+
+    @Test
+    public void should_decrease_twice_faster_the_quality_value_of_a_normal_object_when_sellIn_date_is_negative() {
+        String itemName = "+5 Dexterity Vest";
+        int itemSellIn = 0;
+        int itemQuality = 20;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(itemQuality - 2);
+    }
 }
