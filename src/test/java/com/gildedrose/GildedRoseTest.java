@@ -98,4 +98,17 @@ public class GildedRoseTest {
         assertThat(app.items[0].quality).isEqualTo(itemQuality);
         assertThat(app.items[0].sellIn).isEqualTo(itemSellIn);
     }
+
+    @Test
+    public void should_increase_quality_like_Aged_Brie_for_Backstage_passes_when_sellIn_date_bigger_than_10() {
+        String itemName = "Backstage passes to a TAFKAL80ETC concert";
+        int itemSellIn = 15;
+        int itemQuality = 20;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(itemQuality + 1);
+    }
 }
