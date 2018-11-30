@@ -150,4 +150,17 @@ public class GildedRoseTest {
 
         assertThat(app.items[0].quality).isEqualTo(0);
     }
+
+    @Test
+    public void should_decrease_quality_of_conjured_items_twice_faster_than_normal_item() {
+        String itemName = "Conjured Mana Cake";
+        int itemSellIn = 3;
+        int itemQuality = 6;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(itemQuality - 2);
+    }
 }
