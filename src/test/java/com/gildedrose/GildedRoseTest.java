@@ -60,10 +60,23 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void should_stop_increasing_the_quality_value_when_it__has_reached_50() {
+    public void should_stop_increasing_the_quality_value_when_it_has_reached_50() {
         String itemName = "Aged Brie";
         int itemSellIn = 5;
         int itemQuality = 50;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(itemQuality);
+    }
+
+    @Test
+    public void should_stop_decreasing_the_quality_value_when_it_has_reached_0() {
+        String itemName = "+5 Dexterity Vest";
+        int itemSellIn = 5;
+        int itemQuality = 0;
         Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
         GildedRose app = new GildedRose(items);
 
