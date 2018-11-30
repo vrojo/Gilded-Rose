@@ -137,4 +137,17 @@ public class GildedRoseTest {
 
         assertThat(app.items[0].quality).isEqualTo(itemQuality + 3);
     }
+
+    @Test
+    public void should_decrease_quality_to_0_for_Backstage_passes_when_sellIn_is_smaller_than_0() {
+        String itemName = "Backstage passes to a TAFKAL80ETC concert";
+        int itemSellIn = 0;
+        int itemQuality = 20;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(0);
+    }
 }
