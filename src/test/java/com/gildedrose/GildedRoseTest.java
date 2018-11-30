@@ -60,6 +60,19 @@ public class GildedRoseTest {
     }
 
     @Test
+    public void should_increase_the_quality_value_of_an_Aged_Brie_after_the_sellIn_is_negative() {
+        String itemName = "Aged Brie";
+        int itemSellIn = 0;
+        int itemQuality = 20;
+        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        GildedRose app = new GildedRose(items);
+
+        app.updateQuality();
+
+        assertThat(app.items[0].quality).isEqualTo(itemQuality + 2);
+    }
+
+    @Test
     public void should_stop_increasing_the_quality_value_when_it_has_reached_50() {
         String itemName = "Aged Brie";
         int itemSellIn = 5;
