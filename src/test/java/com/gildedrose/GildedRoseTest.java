@@ -12,7 +12,7 @@ public class GildedRoseTest {
         String itemName = "+5 Dexterity Vest";
         int itemSellIn = 10;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new ItemUpdateManager(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -25,7 +25,7 @@ public class GildedRoseTest {
         String itemName = "+5 Dexterity Vest";
         int itemSellIn = 10;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new ItemUpdateManager(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -38,7 +38,7 @@ public class GildedRoseTest {
         String itemName = "+5 Dexterity Vest";
         int itemSellIn = 0;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new ItemUpdateManager(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -51,7 +51,7 @@ public class GildedRoseTest {
         String itemName = "Aged Brie";
         int itemSellIn = 5;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new AgedBrie(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -64,7 +64,7 @@ public class GildedRoseTest {
         String itemName = "Aged Brie";
         int itemSellIn = 0;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new AgedBrie(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -77,7 +77,7 @@ public class GildedRoseTest {
         String itemName = "Aged Brie";
         int itemSellIn = 5;
         int itemQuality = 50;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new AgedBrie(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -90,7 +90,7 @@ public class GildedRoseTest {
         String itemName = "+5 Dexterity Vest";
         int itemSellIn = 5;
         int itemQuality = 0;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new ItemUpdateManager(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -103,7 +103,7 @@ public class GildedRoseTest {
         String itemName = "Sulfuras, Hand of Ragnaros";
         int itemSellIn = 0;
         int itemQuality = 80;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new Sulfuras(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -117,7 +117,7 @@ public class GildedRoseTest {
         String itemName = "Backstage passes to a TAFKAL80ETC concert";
         int itemSellIn = 15;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new Backstage_Pass(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -130,7 +130,7 @@ public class GildedRoseTest {
         String itemName = "Backstage passes to a TAFKAL80ETC concert";
         int itemSellIn = 10;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new Backstage_Pass(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -143,7 +143,7 @@ public class GildedRoseTest {
         String itemName = "Backstage passes to a TAFKAL80ETC concert";
         int itemSellIn = 5;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new Backstage_Pass(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -156,7 +156,7 @@ public class GildedRoseTest {
         String itemName = "Backstage passes to a TAFKAL80ETC concert";
         int itemSellIn = 0;
         int itemQuality = 20;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new Backstage_Pass(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -169,7 +169,7 @@ public class GildedRoseTest {
         String itemName = "Conjured Mana Cake";
         int itemSellIn = 3;
         int itemQuality = 6;
-        Item[] items = new Item[] { new Item(itemName, itemSellIn, itemQuality) };
+        ItemUpdateManager[] items = {new ConjuredItem(itemName, itemSellIn, itemQuality)};
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
